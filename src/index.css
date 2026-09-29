@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --virt-beige-bg: #E8DDCC;
+  --virt-beige-surface: #F1E9DD;
+  --virt-beige-surface-2: #DED0BD;
+  --virt-beige-light: #F5EEE4;
+
+  --virt-black: #111111;
+  --virt-black-soft: #24211D;
+  --virt-black-muted: #3A352F;
+
+  --virt-border: rgba(17, 17, 17, 0.12);
+  --virt-border-strong: rgba(17, 17, 17, 0.22);
+
+  --virt-glass: rgba(241, 233, 221, 0.55);
+  --virt-glass-strong: rgba(241, 233, 221, 0.72);
+
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--virt-beige-bg);
+  color: var(--virt-black);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Liquid Glass Utilities */
+.virt-glass {
+  background: rgba(241, 233, 221, 0.58);
+  backdrop-filter: blur(24px) saturate(115%);
+  -webkit-backdrop-filter: blur(24px) saturate(115%);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  box-shadow: 0 10px 35px rgba(17, 17, 17, 0.08);
+}
+
+.virt-glass-strong {
+  background: rgba(241, 233, 221, 0.76);
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  box-shadow: 0 14px 40px rgba(17, 17, 17, 0.12);
+}
+
+.virt-surface {
+  background-color: #F1E9DD;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  box-shadow: 0 4px 16px rgba(17, 17, 17, 0.04);
+}
+
+.virt-surface-secondary {
+  background-color: #DED0BD;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.virt-surface-light {
+  background-color: #F5EEE4;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+/* Tactile Button Interactions */
+.virt-btn-primary {
+  background: linear-gradient(135deg, #312E81 0%, #4F46E5 50%, #06B6D4 100%);
+  color: #FFFFFF;
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms ease, opacity 160ms ease;
+}
+.virt-btn-primary:hover {
+  background: linear-gradient(135deg, #2D2A78 0%, #4338CA 50%, #0891B2 100%);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.28);
+}
+.virt-btn-primary:active {
+  transform: scale(0.97);
+}
+
+.virt-gradient-primary {
+  background: linear-gradient(135deg, #312E81 0%, #4F46E5 50%, #06B6D4 100%);
+  color: #FFFFFF;
+}
+
+.virt-btn-secondary {
+  background-color: rgba(241, 233, 221, 0.65);
+  color: #111111;
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms ease, border-color 160ms ease;
+}
+.virt-btn-secondary:hover {
+  background-color: #DED0BD;
+  border-color: rgba(17, 17, 17, 0.28);
+}
+.virt-btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Custom Scrollbar in Beige + Black */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(232, 221, 204, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 17, 17, 0.45);
+}
+
+/* Dedicated Slide Bar Navigation Scrollbar */
+.nav-slidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.nav-slidebar::-webkit-scrollbar-track {
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 9999px;
+}
+.nav-slidebar::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.35);
+  border-radius: 9999px;
+}
+.nav-slidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 17, 17, 0.55);
+}
+
+/* Tabular Figures */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

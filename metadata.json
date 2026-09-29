@@ -1,0 +1,6 @@
+{
+  "name": "VIRTUOSO - Skill & Career Progression Tracker",
+  "description": "AI-powered skill and career progression platform connecting experience, capability, gap analysis, adaptive learning, verifiable evidence, workplace application, and career outcomes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
